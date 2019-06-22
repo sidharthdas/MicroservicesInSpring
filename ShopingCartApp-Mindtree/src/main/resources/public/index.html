@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="./js/userController.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script>
+	
+		$(document).ready(function () {
+			$("#login-page").hide();
+			$("#login").css("background", "none");
+			$("#login").css("color", "grey");
+			$("#signup").css("color", "white");
+	
+			$("#login").click(function() {
+				$("#signup-page").hide();
+				$("#login-page").show();
+				$("#signup").css("background", "none");
+				$("#signup").css("color", "grey");
+				$("#login").css("color", "white");	
+			});
+
+			$("#signup").click(function () {
+				$("#signup-page").show();
+				$("#login-page").hide();
+				$("#signup").css("color", "white");
+				$("#login").css("background", "none");
+				$("#login").css("color", "grey");
+			});
+		});
+    </script>
+  </head>
+  
+  <body class='container-fluid'>
+  
+		<span class="titleText">Shopping Cart Application</span>
+		<div class="form-container">
+			
+			<div id="signup"><h3>SIGN-UP</h3></div>
+			<div id="login"><h3>LOG-IN</h3></div>
+		
+			<div id = "signup-page">
+				<input type = "text" class = "input" id = "sign_uname" placeholder = "Username"><br>
+				<input type = "password" class = "input" id = "sign_pwd" placeholder = "Password"><br>
+				<input type = "password" id = "cpwd"  class = "input" placeholder = "Confirm Password" onblur="return matchPassword()"><br>
+				<button class = "btn" onclick = "return saveUser()">Sign-up</button>
+			</div>
+		
+			<div id = "login-page">
+				<input type = "text" id = "log_uname"  class = "input" placeholder = "Username"><br>
+				<input type = "password" id = "log_pwd"  class = "input" placeholder = "Password"><br>
+				<button class = "btn" onclick = "return login()">Log-In</button>
+			</div>
+	
+		</div>
+  </body>
+</html>
