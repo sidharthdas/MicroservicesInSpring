@@ -1,0 +1,43 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="main_body">
+	<div class="header">
+		<ul class="options">
+			<li class="option"><a onclick = logout()>Log Out</a></li>
+			<li class="option"><a href="cart.html">Cart</a></li>
+			<li class="option"><a href="dashboard.html">All Products</a></li>
+		</ul>
+	</div>
+	<div class="products">
+	<button class="empty" data-hover="Empty Your Cart" onclick=clearCart()>X</button>
+		<div id='cartProductsContainer'>
+	
+		</div>
+	
+		<div class='footer'>
+			<span class="cartTotal">Cart Total: </span>
+			<span class="totalPrice">
+				<input id="totalPrice" type="text" disabled>
+			</span>
+		</div>
+	</div>
+	
+	<div class="emptyCart">
+		<h2>
+			You dont have any product in your cart.<br>
+			Please click <a href="dashboard.html">here</a> to add products.
+		</h2>
+	</div>
+	
+</div>
+
+<div id="unauth" style="display:none;color:white">
+	You are not logged In. Please click here to <a href="index.html">login.</a>
+</div>
+</body>
+<script src="./js/cart.js"></script>
+</html>

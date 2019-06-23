@@ -1,0 +1,351 @@
+		
+		
+		body{
+		background-color:#006266;
+		}
+
+		h1{
+		margin-top:20px;
+		}
+
+		.container{
+
+            width:450px;
+			border:2px solid #808080;
+            margin:70px auto;
+			height:350px; 
+
+        }
+		
+		.container button{
+			height:50px;
+		}
+		
+		.signup,.login{
+
+            width: 50%;
+			border-bottom: 2px solid #808080;
+            background: #04a331;
+			color:black;
+            height: 60px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            text-transform: uppercase;
+
+        }
+		
+		.signup-box,.login-box{
+
+            box-sizing:border-box;
+            padding:20px;
+
+        }
+		
+		.input{
+
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+			margin-top: 15px;
+            border: 2px solid #808080;
+			text-align:center;
+
+        }
+		
+		.input:focus{
+
+            width: 100%;
+            border-color:black;
+			border-radius:20px;
+			transition:0.25s;
+
+        }
+		
+		.btn{
+
+            width:50%;
+			float:center;
+            height: 30px;
+            line-height:30px;
+            text-align:center;
+            text-transform:uppercase;
+            font-weight:bold;
+            cursor:pointer;
+            margin-bottom:10px;
+			border: 2px solid #808080;
+
+        }
+		
+		.btn:hover{
+			border-radius:25px;
+			transition:0.25s;
+			background-color:#009432;
+			color:white;
+		}
+		
+		.filterHeader{
+			width:70%;
+			background-color:#2980b9;
+			margin:50px auto;
+			padding:10px;
+		}
+		
+		.filter{
+			width:90%;
+			margin:1% 20px;
+			text-align:center;
+			
+		}
+		
+		.filter select{
+			float:left;
+			margin-left:10px;
+			height:30px;
+			border:2px solid;
+			border-radius:20px;
+			text-align:center;
+		}
+		
+		.filter input{
+			float:center;
+			height:30px;
+			width:50%;
+			text-align:center;
+			border:2px solid;
+			border-radius:20px;
+			background-color:
+		}
+		
+		.filter button{
+			margin-right:10px;
+			height:30px;
+			border:2px solid;
+			border-radius:20px;
+			background-color:#2ecc71;
+		}
+		
+		.filter button:hover{
+			background-color:#27ae60;
+		}
+		
+		.filterOption{
+			font-weight:bold;
+		}
+		
+		#productContainer{
+			margin-top:20px;
+			width:80%;
+			margin: 60px auto;
+			background-color:black;
+			color:white;
+			padding:15px;	
+		}
+		
+		#productContainer button{
+			width:200px;
+		}
+		
+		.addtocart:hover{
+			border-radius:25px;
+			transition:0.25s;
+			background-color:#009432;
+			color:white;
+		}
+		
+		.header{
+			margin:20px auto;
+			float:top;
+			position:relative;
+			width:90%;
+			height:50px;
+			
+		}
+		
+		.header ul{
+			list-style-type:none;
+		}
+		
+		.header a{
+			float:right;
+			paading:10px;
+			margin:5px auto;
+			margin-left: 30px;
+			margin-right:20px;
+			height:30px;
+			font-weight:bold;
+			font-size:20;
+			color:black;
+			text-decoration:none;
+		}
+		
+		.header a:hover{
+			width:200px;
+			border-radius:15px;
+			background-color:#27ae60;
+			text-align:center;
+			line-height:30px;
+		}
+		
+		.header a[href="logout.html"]:hover{
+			
+			background-color:#e74c3c
+		}
+		
+		button{
+			width:100px;
+			float:right;
+            height: 20px;
+            line-height:05px;
+            text-align:center;
+            text-transform:uppercase;
+            font-weight:bold;
+            cursor:pointer;
+            padding:10px;
+			margin-left:10px;
+			border: 2px solid #808080;
+		}
+		
+		.update:hover{
+			border-radius:25px;
+			transition:0.25s;
+			background-color:#009432;
+			color:white;
+		}
+		
+		.delete:hover{
+			border-radius:25px;
+			transition:0.25s;
+			background-color:#EA2027;
+			color:white;
+		}
+		
+		.quantity{
+			line-height:-40px;
+			float:right;
+		}
+		
+		.quantNumber{
+			
+			border-radius:50px;
+			width:30px;
+			height:30px;
+			text-align:center;
+			
+		}
+		.products{
+			width:70%;
+			margin-left:15%;
+		}
+		
+		#cartProductsContainer{
+			margin-top:20px;
+			width:80%;
+			margin: 60px auto;
+			background-color:black;
+			color:white;
+			padding:15px;
+		}
+		.empty {
+			
+			width:100px;
+			float:right;
+			color:red;
+			text-align:left;
+			background:none;
+			border:0;
+			font-weight:bold;
+		}
+		
+		.empty:hover{
+			text-indent:-99999px;
+			line-height: 0;
+		}
+		.empty:hover:after{
+			content:attr(data-hover);
+			text-indent: 0;
+			display: block;
+			line-height: 20px;;
+			border-radius:20px;
+			background-color:red;
+			background:block;
+			width:200px;
+			height:20px;
+			color:black;
+			text-align:center;
+			margin-top:-10px;
+			margin-left:-100px;
+		}
+				
+		.productItem{
+			padding:10px;
+			float:top;
+			
+		}
+		
+		.footer{
+			
+			width:20%;
+			margin:40px auto;
+			color:black;
+			font-weight:bold;
+			text-align:center;
+		}
+		
+		#totalPrice{
+			float:right;
+			color:black;
+			width:100px;
+			border:0;
+			text-align:center;
+			background:none;
+		}
+		
+		.emptyCart{
+			width:50%;
+			text-align:center;
+			margin-top:50px;
+			margin: 60px auto;
+			padding:15px;
+			background-color:white;
+		}
+		
+		#productByIdConatiner{
+			margin-top:20px;
+			width:80%;
+			margin: 60px auto;
+			background-color:black;
+			color:white;
+			padding:15px;	
+		}
+		
+		#productByIdConatiner button{
+			width:200px;
+		}
+		
+		#productByNameContainer{
+			margin-top:20px;
+			width:80%;
+			margin: 60px auto;
+			background-color:black;
+			color:white;
+			padding:15px;	
+		}
+		
+		#productByNameContainer button{
+			width:200px;
+		}
+		
+		#productByCategoryContainer{
+			margin-top:20px;
+			width:80%;
+			margin: 60px auto;
+			background-color:black;
+			color:white;
+			padding:15px;	
+		}
+		
+		#productByCategoryContainer button{
+			width:200px;
+		}

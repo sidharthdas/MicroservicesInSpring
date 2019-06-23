@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./js/user.js"></script>
+	<script>
+	
+		$(document).ready(function () {
+			$(".login-box").hide();
+			$(".login").css("background", "none");	
+	
+			$(".login").click(function() {
+				$(".signup-box").hide();
+				$(".login-box").show();
+				$(".signup").css("background", "none")
+				$(".login").css("background", "#04a331");	
+			});
+
+			$(".signup").click(function () {
+				$(".signup-box").show();
+				$(".login-box").hide();
+				$(".signup").css("background", "#04a331")
+				$(".login").css("background", "none");
+			});
+		});
+    </script>
+</head>
+
+<body>
+
+	<h1 align = center><u>SHOPPING CART APPLICATION<u></h1>
+	<div class="container">
+		<div class="signup"><h3>SIGN-UP</h3></div>
+		<div class="login"><h3>LOG-IN</h3></div>
+		
+		<div class = "signup-box">
+			<input type = "text" class = "input" id = "sign_uname" placeholder = "Username"><br>
+			<input type = "password" class = "input" id = "sign_pwd" placeholder = "Password"><br>
+			<input type = "password" id = "cpwd"  class = "input" placeholder = "Confirm Password"><br>
+			<button class = "btn" onclick = "return save()">Create Account</button>
+		</div>
+		
+		<div class = "login-box">
+			<input type = "text" id = "log_uname"  class = "input" placeholder = "Username"><br>
+			<input type = "password" id = "log_pwd"  class = "input" placeholder = "Password"><br>
+			<button class = "btn" onclick = "return login()">Log-In</button>
+		</div>
+	</div>
+</body>
+</html>
