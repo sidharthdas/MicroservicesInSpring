@@ -12,5 +12,6 @@ public interface AdminDao {
 	public String addAdmin(Admin admin);
 	public String addBook(Book book)  throws DaoException;
 	public String addApparal(Apparal apparal) throws DaoException;
+	//public 
 
 }

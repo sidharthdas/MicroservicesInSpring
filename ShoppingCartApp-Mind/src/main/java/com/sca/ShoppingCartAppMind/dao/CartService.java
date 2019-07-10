@@ -12,4 +12,5 @@ public interface CartService {
 	public String removeProductFromCart(Long userId, int prodId) throws DaoException;
 	public MyCart viewMyCart(Long userId) throws DaoException;
 	public  String changeQuantityOfProductByNumber(int quantityOfProduct, int productId, Long userId) throws DaoException;
+	public void setUserIdForAdminAccess(Long userId) throws DaoException;
 }

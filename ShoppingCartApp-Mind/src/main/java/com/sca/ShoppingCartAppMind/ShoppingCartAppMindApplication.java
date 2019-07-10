@@ -1,4 +1,4 @@
-package com.sca.ShoppingCartAppMind;
+ package com.sca.ShoppingCartAppMind;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

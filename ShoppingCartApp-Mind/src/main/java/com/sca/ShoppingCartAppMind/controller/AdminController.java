@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sca.ShoppingCartAppMind.dao.AdminService;
+import com.sca.ShoppingCartAppMind.dao.CartService;
+import com.sca.ShoppingCartAppMind.dto.MyCart;
 import com.sca.ShoppingCartAppMind.dto.UserSession;
 import com.sca.ShoppingCartAppMind.exception.DaoException;
 import com.sca.ShoppingCartAppMind.model.Admin;
@@ -27,6 +29,9 @@ public class AdminController {
 
 	@Autowired
 	private AdminService adminService;
+
+	@Autowired
+	private CartService cartService;
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -143,6 +148,20 @@ public class AdminController {
 			e.printStackTrace();
 		}
 		return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
+	}
+
+	@RequestMapping(value = "user-cart", method = RequestMethod.GET)
+	public MyCart userCart(@RequestParam(value = "userId", required = true) Long userId) {
+
+		UserSession.userId = userId;
+		try {
+			return cartService.viewMyCart(userId);
+		} catch (DaoException e) { // TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return null;
+
 	}
 
 }

@@ -34,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<List> getAllProduct(String adminName,Long userId) throws DaoException {
-		if (userId == null || UserSession.adminUserName == null) {
+		if (userId == null && UserSession.adminUserName == null) {
 			throw new DaoException("Authenticatin required.");
 		}
 		List<List> products = new ArrayList<>();

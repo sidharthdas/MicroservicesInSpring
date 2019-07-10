@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import com.sca.ShoppingCartAppMind.dao.CartService;
 import com.sca.ShoppingCartAppMind.dto.MyCart;
 import com.sca.ShoppingCartAppMind.dto.ProductInCart;
+import com.sca.ShoppingCartAppMind.dto.UserSession;
 import com.sca.ShoppingCartAppMind.exception.DaoException;
 import com.sca.ShoppingCartAppMind.model.Apparal;
 import com.sca.ShoppingCartAppMind.model.Book;
@@ -140,7 +141,7 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public MyCart viewMyCart(Long userId) throws DaoException {
 		// TODO Auto-generated method stub
-		if (userId == null) {
+		if (UserSession.userId == null  && UserSession.adminUserName == null) {
 			throw new DaoException("Authorization Required");
 		}
 		MyCart myCart = new MyCart();
@@ -206,6 +207,13 @@ public class CartServiceImpl implements CartService {
 		getSession().save(productrQuantityCart.get(0));
 
 		return null;
+	}
+	@Override
+	public void setUserIdForAdminAccess(Long userId) throws DaoException {
+		if(UserSession.adminUserName == null) {
+			throw new DaoException("Admin Access Required");
+		}
+		UserSession.userId = userId;
 	}
 
 }
