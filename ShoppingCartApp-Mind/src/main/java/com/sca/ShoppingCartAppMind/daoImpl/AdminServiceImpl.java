@@ -195,9 +195,10 @@ public class AdminServiceImpl implements AdminService {
 			List<ProductQuantityCart> productQuantityCarts = getSession()
 					.createQuery("FROM ProductQuantityCart WHERE cartId = :cartId")
 					.setParameter("cartId", user.getUserId()).list();
-			
-			List<WishList> wishLists = getSession().createQuery("FROM WishList WHERE id = :id").setParameter("id", user.getCart().getCartId()).list();
-			
+
+			List<WishList> wishLists = getSession().createQuery("FROM WishList WHERE id = :id")
+					.setParameter("id", user.getCart().getCartId()).list();
+
 			for (ProductQuantityCart p : productQuantityCarts) {
 				getSession().delete(p);
 			}
