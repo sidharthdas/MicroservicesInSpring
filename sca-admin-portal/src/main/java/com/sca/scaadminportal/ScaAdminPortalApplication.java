@@ -22,12 +22,6 @@ public class ScaAdminPortalApplication {
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
-	/*
-	 * @Bean
-	 * 
-	 * @LoadBalanced public WebClient.Builder builder(){ return WebClient.builder();
-	 * }
-	 */
 
 	public static void main(String[] args) {
 		SpringApplication.run(ScaAdminPortalApplication.class, args);

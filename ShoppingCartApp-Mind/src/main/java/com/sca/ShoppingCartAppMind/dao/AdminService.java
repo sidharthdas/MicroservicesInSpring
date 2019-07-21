@@ -23,4 +23,5 @@ public interface AdminService {
 	public String updateApparal(Apparal apparal);
 	public String deleteUser(String userName) throws DaoException;
 	
+	
 }

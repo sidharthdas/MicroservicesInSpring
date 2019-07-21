@@ -156,7 +156,7 @@ public class AdminController {
 		UserSession.userId = userId;
 		try {
 			return cartService.viewMyCart(userId);
-		} catch (DaoException e) { // TODO Auto-generated catch block
+		} catch (DaoException e) { 
 			e.printStackTrace();
 		}
 
